@@ -1,12 +1,16 @@
 import React from 'react';
 
 export class Counter extends React.Component {
-    state = {
-        count: 0
-    };
+    constructor(props) {
+        console.log('props in constructor', props)
+        super(props)
+        this.state = {count: 0}
+    }
 
     handleButtonClick = () => {
-        const newCount = this.state.count + 1
+        console.log('props in handleButtonClick', this.props)
+        console.log('state in handleButtonClick', this.state)
+        const newCount = this.state.count + this.props.step
         this.setState({
             count: newCount
         })
@@ -22,4 +26,8 @@ export class Counter extends React.Component {
             </div>
         )
     }
+}
+
+Counter.defaultProps = {
+    step: 1
 }

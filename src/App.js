@@ -29,7 +29,7 @@ function App() {
         <br />
         <br />
         <br />
-        <Counter />
+        <Counter count={123} step={5} />
       </Split>
 
       <Split className="right" flexBasis={3}>
