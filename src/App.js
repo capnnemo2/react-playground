@@ -1,9 +1,10 @@
 import React from 'react';
 import Split from './composition/Split';
-import './App.css'
-import Tooltip from './composition/Tooltip'
+import './App.css';
+import Tooltip from './composition/Tooltip';
 import Messages from './Messages';
 import {TheDate} from './state/TheDate';
+import {Counter} from './state/Counter';
 
 const firstTooltip = (
   <Tooltip color='hotpink' message='tooltip message'>
@@ -25,6 +26,10 @@ function App() {
         <Tooltip message='one more tooltip message'>
           Aurelius?
         </Tooltip>
+        <br />
+        <br />
+        <br />
+        <Counter />
       </Split>
 
       <Split className="right" flexBasis={3}>
