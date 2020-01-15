@@ -3,6 +3,7 @@ import Split from './composition/Split';
 import './App.css'
 import Tooltip from './composition/Tooltip'
 import Messages from './Messages';
+import {TheDate} from './state/TheDate';
 
 const firstTooltip = (
   <Tooltip color='hotpink' message='tooltip message'>
@@ -35,6 +36,11 @@ function App() {
         <Messages name="Messages" unread={0}/>
         <Messages name="Notifications" unread={10}/>
       </div>
+
+      <div className='App'>
+        <TheDate />
+      </div>
+
     </main>
   )
 }
