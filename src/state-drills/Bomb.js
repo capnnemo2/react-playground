@@ -39,6 +39,7 @@ export class Bomb extends React.Component {
     render() {
         return(
             <div className='bombCountdown'>
+                <h2>Is that a . . . clock?</h2>
                 <p>{this.renderDisplay()}</p>
             </div>
         )

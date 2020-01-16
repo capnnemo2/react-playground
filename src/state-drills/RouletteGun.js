@@ -48,6 +48,7 @@ export class RouletteGun extends React.Component {
         return(
             <div>
                 <br />
+                <h2>Roulette Gun</h2>
                 <button onClick={this.handleTriggerPull}>Pull the trigger</button>
                 <p>{this.renderDisplay()}</p>
             </div>
