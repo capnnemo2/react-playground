@@ -45,7 +45,7 @@ function App() {
 
       <Split className="right" flexBasis={1}>
         This is the content for the {secondTooltip} split. I bet we find out soon...
-        <RouletteGun />
+        <RouletteGun bulletInChamber={8} />
       </Split>
       
       <div>

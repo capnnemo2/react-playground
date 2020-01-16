@@ -2,7 +2,7 @@ import React from 'react';
 
 export class Bomb extends React.Component {
     state = {
-        count: 0,
+        count: 0
     };
 
 
