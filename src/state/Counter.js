@@ -21,7 +21,7 @@ export class Counter extends React.Component {
             <div>
                 <p>The current count: {this.state.count}</p>
                 <button onClick={this.handleButtonClick}>
-                    Add 1
+                    Add {this.props.step}
                 </button>
             </div>
         )
