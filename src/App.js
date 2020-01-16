@@ -5,7 +5,8 @@ import Tooltip from './composition/Tooltip';
 import Messages from './Messages';
 import {TheDate} from './state/TheDate';
 import {Counter} from './state/Counter';
-import {HelloWorld} from './state-drills/HelloWorld'
+import {HelloWorld} from './state-drills/HelloWorld';
+import {Bomb} from './state-drills/Bomb';
 
 const firstTooltip = (
   <Tooltip color='hotpink' message='tooltip message'>
@@ -35,6 +36,10 @@ function App() {
         <br />
         <br />
         <HelloWorld />
+        <br />
+        <br />
+        <br />
+        <Bomb count={0} />
       </Split>
 
       <Split className="right" flexBasis={3}>
