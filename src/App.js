@@ -9,6 +9,7 @@ import {HelloWorld} from './state-drills/HelloWorld';
 import {Bomb} from './state-drills/Bomb';
 import {RouletteGun} from './state-drills/RouletteGun';
 import Tabs from './state/Tabs';
+import Accordion from './state-drills/Accordion';
 
 const firstTooltip = (
   <Tooltip color='hotpink' message='tooltip message'>
@@ -57,6 +58,7 @@ function App() {
         This is the content for the {secondTooltip} split. I bet we find out soon...
         <RouletteGun bulletInChamber={8} />
         <Tabs tabs={tabsProps} />
+        <Accordion />
       </Split>
       
       <div>
