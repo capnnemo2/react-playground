@@ -7,7 +7,8 @@ import {TheDate} from './state/TheDate';
 import {Counter} from './state/Counter';
 import {HelloWorld} from './state-drills/HelloWorld';
 import {Bomb} from './state-drills/Bomb';
-import {RouletteGun} from './state-drills/RouletteGun'
+import {RouletteGun} from './state-drills/RouletteGun';
+import Tabs from './state/Tabs';
 
 const firstTooltip = (
   <Tooltip color='hotpink' message='tooltip message'>
@@ -20,6 +21,15 @@ const secondTooltip = (
     right
   </Tooltip>
 )
+
+const tabsProps = [
+  { name: 'First tab',
+    content: 'This is the content of the first tab.'},
+  { name: 'Second tab',
+    content: 'This is the content of the second tab. There is more writing here than in the first tab.'},
+  { name: 'Third tab',
+    content: 'This is the content of the third tab. There is more writing her than in the first tab. There is also more writing here than in the second tab.'}
+]
 
 function App() {
   return (
@@ -46,6 +56,7 @@ function App() {
       <Split className="right" flexBasis={1}>
         This is the content for the {secondTooltip} split. I bet we find out soon...
         <RouletteGun bulletInChamber={8} />
+        <Tabs tabs={tabsProps} />
       </Split>
       
       <div>
