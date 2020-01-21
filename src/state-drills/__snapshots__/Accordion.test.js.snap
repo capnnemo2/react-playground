@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion component renders a clicked section 1`] = `
+<ul>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Ice Cream
+    </button>
+  </li>
+  <li
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Popsicles
+    </button>
+    <p>
+      Popsicles seem to be most popular with younger humans. They are a perfect treat for a hot summer day, although they can be a bit messy.
+    </p>
+  </li>
+  <li
+    key="2"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Tater Tots
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Accordion component renders an empty li when the sections prop is not supplied 1`] = `<ul />`;
+
+exports[`Accordion component renders no section as active by default 1`] = `
+<ul>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Ice Cream
+    </button>
+  </li>
+  <li
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Popsicles
+    </button>
+  </li>
+  <li
+    key="2"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Tater Tots
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Accordion component renders only the last section when multiple sections have been clicked 1`] = `
+<ul>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Ice Cream
+    </button>
+  </li>
+  <li
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Popsicles
+    </button>
+  </li>
+  <li
+    key="2"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Tater Tots
+    </button>
+    <p>
+      An unconventional dessert choice, tater tots provide steamy potato bits and an opportunity to eat ketchup, barbeque sauce, or the hot sauce of your choosing.
+    </p>
+  </li>
+</ul>
+`;

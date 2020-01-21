@@ -1,0 +1,23 @@
+.Accordion {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.Accordion_item button {
+    background: lightcoral;
+    border: 1px solid #222;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.Accordion_item p {
+    background: #fdfcfc;
+    border: 1px solid #777;
+    border-top: none;
+    margin: 0;
+    padding: 20px 10px;
+}
