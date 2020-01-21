@@ -32,6 +32,15 @@ const tabsProps = [
     content: 'This is the content of the third tab. There is more writing her than in the first tab. There is also more writing here than in the second tab.'}
 ]
 
+const sectionsProps = [
+  { title: 'Ice Cream',
+    content: 'There is an almost infinite variety of ice cream flavors, but there are only really a handful of flavors that matter. King among those select few is Chocolate Chip Cookie Dough.'},
+  { title: 'Popsicles',
+    content: 'Popsicles seem to be most popular with younger humans. They are a perfect treat for a hot summer day, although they can be a bit messy.'},
+  { title: 'Tater Tots',
+    content: 'An unconventional dessert choice, tater tots provide steamy potato bits and an opportunity to eat ketchup, barbeque sauce, or the hot sauce of your choosing.'}
+]
+
 function App() {
   return (
     <main className='App'>
@@ -58,7 +67,7 @@ function App() {
         This is the content for the {secondTooltip} split. I bet we find out soon...
         <RouletteGun bulletInChamber={8} />
         <Tabs tabs={tabsProps} />
-        <Accordion />
+        <Accordion sections={sectionsProps} />
       </Split>
       
       <div>
