@@ -2,6 +2,16 @@ import React from 'react';
 import './countrySelector.css';
 
 export default class CountrySelector extends React.Component {
+
+    changeSelection(value) {
+        if(value === 'None') {
+            this.props.changeHandler(null);
+        } else {
+            const country = this.props.countries.find(country => country.name === value);
+            this.props.changeHandler(country);
+        }
+    }
+
     render() {
         const options = this
             .props
@@ -13,7 +23,11 @@ export default class CountrySelector extends React.Component {
             <div className='country_selector'>
                 <form>
                     <label htmlFor='country'>Select a country:</label>
-                    <select id='country' name='country'>
+                    <select
+                        id='country'
+                        name='country'
+                        onChange={e => this.changeSelection(e.target.value)}    
+                    >
                         <option value='None'>Select one...</option>
                         {options}
                     </select>
