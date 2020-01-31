@@ -10,6 +10,10 @@ const languageSpecificCopy = {
     'en-AUS': {
         title: "G'day, mate",
         body: 'Stereotypes are generally based on some kernal of truth at some level.'
+    },
+    'italian': {
+        title: 'Buon giorno, principessa',
+        body: 'C\'era una volta una principessa voleva dei biscotti.'
     }
 };
 

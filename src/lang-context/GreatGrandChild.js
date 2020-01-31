@@ -10,6 +10,11 @@ export default class GreatGrandChild extends React.Component {
             <section>
                 <h2>{copy.title}</h2>
                 <p>{copy.body}</p>
+                <button
+                    onClick={() => this.context.setLang('italian')}>
+                    Italian{'   '}
+                    <span role='img' aria-label='italian'>🇮🇹</span>
+                </button>
             </section>
         )
     }
