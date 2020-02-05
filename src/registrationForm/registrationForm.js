@@ -1,31 +1,35 @@
 import React from "react";
+import ValidationError from "./ValidationError";
 
 export default class RegistrationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: {
-        value: ""
+        value: "",
+        touched: false
       },
       password: {
-        value: ""
+        value: "",
+        touched: false
       },
       repeatPassword: {
-        value: ""
+        value: "",
+        touched: false
       }
     };
   }
 
   updateName(name) {
-    this.setState({ name: { value: name } });
+    this.setState({ name: { value: name, touched: true } });
   }
 
   updatePassword(password) {
-    this.setState({ password: { value: password } });
+    this.setState({ password: { value: password, touched: true } });
   }
 
   updateRepeatPassword(repeatPassword) {
-    this.setState({ repeatPassword: { value: repeatPassword } });
+    this.setState({ repeatPassword: { value: repeatPassword, touched: true } });
   }
 
   handleSubmit(e) {
@@ -36,7 +40,7 @@ export default class RegistrationForm extends React.Component {
     console.log(repeatPassword);
   }
 
-  validateName(fieldValue) {
+  validateName() {
     const name = this.state.name.value.trim();
     if (name.length === 0) {
       return "Name is required";
@@ -65,6 +69,9 @@ export default class RegistrationForm extends React.Component {
   }
 
   render() {
+    const nameError = this.validateName();
+    const passwordError = this.validatePassword();
+    const repeatPasswordError = this.validateRepeatPassword();
     return (
       <form className="registration" onSubmit={e => this.handleSubmit(e)}>
         <h2>Register</h2>
@@ -78,6 +85,7 @@ export default class RegistrationForm extends React.Component {
             id="name"
             onChange={e => this.updateName(e.target.value)}
           />
+          {this.state.name.touched && <ValidationError message={nameError} />}
         </div>
         <div className="form-group">
           <label htmlFor="password">Password *</label>
@@ -88,6 +96,9 @@ export default class RegistrationForm extends React.Component {
             id="password"
             onChange={e => this.updatePassword(e.target.value)}
           />
+          {this.state.name.touched && (
+            <ValidationError message={passwordError} />
+          )}
           <div className="registration__hint">
             6 to 72 characters, must include a number
           </div>
@@ -101,13 +112,24 @@ export default class RegistrationForm extends React.Component {
             id="repeatPassword"
             onChange={e => this.updateRepeatPassword(e.target.value)}
           />
+          {this.state.name.touched && (
+            <ValidationError message={repeatPasswordError} />
+          )}
         </div>
 
         <div className="registration__button__group">
           <button type="reset" className="registration__button">
             Cancel
           </button>
-          <button type="submit" className="registration__button">
+          <button
+            type="submit"
+            className="registration__button"
+            disabled={
+              this.validateName() ||
+              this.validatePassword() ||
+              this.validateRepeatPassword()
+            }
+          >
             Save
           </button>
         </div>
