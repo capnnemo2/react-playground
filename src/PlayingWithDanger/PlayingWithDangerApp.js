@@ -8,9 +8,12 @@ export default class PlayingWithDangerApp extends React.Component {
       <div className="App">
         <CurrencyError>
           Germany: <Currency value={21} locale="de-DE" currency="US" />
-          USA: <Currency value={21} locale="en-US" currency="USD" />
-          India: <Currency value={21} locale="en-IN" currency="USD" />
         </CurrencyError>
+        <CurrencyError>
+          USA: <Currency value={21} locale="en-US" currency="USD" />
+        </CurrencyError>
+
+        <h2>Yoda is not all-powerful.</h2>
       </div>
     );
   }
