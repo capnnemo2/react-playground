@@ -96,12 +96,12 @@ export default class RegistrationForm extends React.Component {
             id="password"
             onChange={e => this.updatePassword(e.target.value)}
           />
-          {this.state.name.touched && (
-            <ValidationError message={passwordError} />
-          )}
           <div className="registration__hint">
             6 to 72 characters, must include a number
           </div>
+          {this.state.name.touched && (
+            <ValidationError message={passwordError} />
+          )}
         </div>
         <div className="form-group">
           <label htmlFor="repeatPassword">Repeat Password *</label>
