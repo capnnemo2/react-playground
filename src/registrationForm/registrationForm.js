@@ -3,7 +3,29 @@ import React from "react";
 export default class RegistrationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.nameInput = React.createRef();
+    this.state = {
+      name: {
+        value: ""
+      },
+      password: {
+        value: ""
+      },
+      repeatPassword: {
+        value: ""
+      }
+    };
+  }
+
+  updateName(name) {
+    this.setState({ name: { value: name } });
+  }
+
+  updatePassword(password) {
+    this.setState({ password: { value: password } });
+  }
+
+  updateRepeatPassword(repeatPassword) {
+    this.setState({ repeatPassword: { value: repeatPassword } });
   }
 
   handleSubmit(e) {
